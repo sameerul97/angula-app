@@ -1,0 +1,22 @@
+.list-group-item {
+    z-index: 2;
+    /* color: #fff; */
+    background-color: #593196;
+    border-color: blueviolet;
+    border-bottom-width: 1px;
+}
+.list-group-item.active:hover {
+    background-color: lightslategrey;
+}
+#noteBtn{
+    border-radius: 35px;
+}
+.textArea{
+    height: 250px;
+}
+
+
+span > a:hover {
+    cursor:pointer;
+}
+

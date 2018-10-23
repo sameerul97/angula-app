@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.title{
+    color:white;text-align:center;
+    margin: auto;
+  }
+
+  
+.BsSubmitButton{
+  float: right;
+}
+
+/* body {
+  overflow:hidden;
+} */

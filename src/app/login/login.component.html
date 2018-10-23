@@ -1,0 +1,80 @@
+<!-- <div class="container p-4">
+  <form action="">
+    <div class="form-group">
+      <label for="usr">Username:</label>
+      <input type="text" class="form-control" id="usr" name="username">
+    </div>
+    
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary BsSubmitButton">Submit</button>
+  </form>
+</div> -->
+
+<!-- <div class="container p-3">
+  <h1>Log In</h1>
+  <form (ngSubmit)="onSubmit(name.value,password.value)" #userLoginForm="ngForm">
+    <div class="form-group">
+      <label for="name">Username*</label>
+      <input type="text" class="form-control" id="username" required [(ngModel)]="model.username" name="username" #name="ngModel">
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        Username is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password*</label>
+      <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel">
+      <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+        Password is required
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!userLoginForm.form.valid">Submit</button>
+
+  </form>
+  <h2 name="title">{{serverResponse}}</h2>
+
+  <button type="submit" class="btn btn-success" (click)="runProfile()">Check Profile</button>
+
+</div> -->
+
+
+
+<form class="text-center form-signin" (ngSubmit)="onSubmit(name.value,password.value)" #userLoginForm="ngForm">
+  <div class="form-group">
+
+  <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+
+    <label for="name">Username*</label>
+    <input type="text" class="form-control" id="username" required [(ngModel)]="model.username" name="username" #name="ngModel">
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      Username is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password*</label>
+    <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel">
+    <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+      Password is required
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!userLoginForm.form.valid">Submit</button>
+  <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+  <h2 name="title">{{serverResponse}}</h2>
+
+</form>
+<!-- <form class="text-center form-signin">
+  <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form> -->

@@ -1,0 +1,77 @@
+<!-- <div class="container p-4">
+  <form action="">
+    <div class="form-group">
+      <label for="usr">Username:</label>
+      <input type="text" class="form-control" id="usr" name="username">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" name="password">
+    </div>
+    <div class="form-group">
+      <label for="pwd2">Retype Password:</label>
+      <input type="password" class="form-control" id="pwd" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary BsSubmitButton">Submit</button>
+  </form>
+</div> -->
+
+<div class="container p-3">
+  <h1>Sign Up</h1>
+  <form (ngSubmit)="submitUser()" #userLoginForm="ngForm">
+    <div class="form-group">
+      <label for="username">Name*</label>
+      <input type="text" class="form-control" id="username" required [(ngModel)]="model.name" name="name" #name="ngModel" >
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email*</label>
+      <input type="text" class="form-control" id="email" required [(ngModel)]="model.userEmail" name="userEmail" #userEmail="ngModel">
+      <div [hidden]="userEmail.valid || userEmail.pristine" class="alert alert-danger">
+        Email is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password*</label>
+      <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel"
+        (keyup)="onKey()">
+      <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+        Password is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password*</label>
+      <input type="password" class="form-control" id="password2" required [(ngModel)]="model.password2" name="password2" #password2="ngModel"
+        (keyup)="onKey()">
+      <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+        Password is required
+      </div>
+    </div>
+    <div *ngIf="passwordMatch; else notMatch">Password Match:
+      <i class="fas fa-check"></i>
+    </div>
+    <ng-template #notMatch>
+      <div>Password Match:
+        <i class="fas fa-times"></i>
+      </div>
+    </ng-template>
+
+    <button type="submit" class="btn btn-success" [disabled]="!passwordMatch || !userLoginForm.form.valid">Submit</button>
+    <h2 name="title">{{serverResponse}}</h2>
+
+  </form>
+  
+  <!-- <h2 name="title">{{serverResponse}}</h2> -->
+
+  <!-- <button type="submit" class="btn btn-success" (click)="runProfile()">Submit</button> -->
+
+</div>
