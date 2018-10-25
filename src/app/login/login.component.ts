@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { loginUser } from '../Interfaces/loginUserInterface';
 import { LoginService } from 'src/app/login.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
   model = new loginUser('', '');
 
   public serverResponse: string;
-  constructor(private _loginService: LoginService, private router: Router) {
+  constructor(private _loginService: LoginService, private router: Router,
+    private ngxSpinner: NgxSpinnerService) {
 
   }
 
@@ -34,6 +36,7 @@ export class LoginComponent implements OnInit {
 
     // console.log(this._loginService.getUserNameCredential());
     // console.log(this._loginService.getUserPasswordCredential());
+    this.ngxSpinner.show();
     this._loginService.postLoginService(
       this._loginService.getUserNameCredential(),
       this._loginService.getUserPasswordCredential())
@@ -60,6 +63,7 @@ export class LoginComponent implements OnInit {
 
   setText(response) {
     // console.log(Message);
+    this.ngxSpinner.hide();
     if (response.Message != "Okay") {
       // Unsuccessful Return
       console.log(response.Message);

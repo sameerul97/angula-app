@@ -46,7 +46,7 @@
 <form class="text-center form-signin" (ngSubmit)="onSubmit(name.value,password.value)" #userLoginForm="ngForm">
   <div class="form-group">
 
-  <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+    <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
 
     <label for="name">Username*</label>
     <input type="text" class="form-control" id="username" required [(ngModel)]="model.username" name="username" #name="ngModel">
@@ -57,7 +57,8 @@
 
   <div class="form-group">
     <label for="password">Password*</label>
-    <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel">
+    <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password"
+      #password="ngModel">
     <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
       Password is required
     </div>
@@ -65,9 +66,13 @@
 
   <button type="submit" class="btn btn-success" [disabled]="!userLoginForm.form.valid">Submit</button>
   <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+  <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-newton-cradle">
+    <p style="font-size: 20px; color: white">Logging in...</p>
+  </ngx-spinner>
   <h2 name="title">{{serverResponse}}</h2>
 
 </form>
+
 <!-- <form class="text-center form-signin">
   <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>

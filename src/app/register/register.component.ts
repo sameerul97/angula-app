@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { signUpUser } from 'src/app/Interfaces/signUpUserInterface';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -13,7 +14,8 @@ export class RegisterComponent implements OnInit {
   passwordMatch: boolean;
   public serverResponse: string;
 
-  constructor(private _loginService: LoginService, private router: Router) { }
+  constructor(private _loginService: LoginService, private router: Router,
+    private ngxSpinner: NgxSpinnerService) { }
 
   ngOnInit() {
     this.serverResponse = "";
@@ -37,7 +39,8 @@ export class RegisterComponent implements OnInit {
 
   }
   submitUser() {
-    this.serverResponse = "Loading Please Wait";
+    // this.serverResponse = "Loading Please Wait";
+    this.ngxSpinner.show();
     console.log(this.model);
 
     this._loginService.signUpService(this.model.name, this.model.userEmail, this.model.password).subscribe(res =>
@@ -62,6 +65,8 @@ export class RegisterComponent implements OnInit {
     console.log(response.Message);
   }
   registeredUserSignIn(response) {
+    this.ngxSpinner.hide();
+
     this.serverResponse = response.Message;
     localStorage.setItem("userName", response.Message);
     console.log(response);

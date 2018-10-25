@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ModalComponent } from './modal/modal.component';
 import { MyNotesComponent } from './my-notes/my-notes.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 export function tokenGetter() {
   return localStorage.getItem('access_token');
 }
@@ -40,6 +42,7 @@ export function tokenGetter() {
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxSpinnerModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter

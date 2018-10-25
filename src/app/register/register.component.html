@@ -67,7 +67,9 @@
 
     <button type="submit" class="btn btn-success" [disabled]="!passwordMatch || !userLoginForm.form.valid">Submit</button>
     <h2 name="title">{{serverResponse}}</h2>
-
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-newton-cradle">
+      <p style="font-size: 20px; color: white">Signing Up...</p>
+    </ngx-spinner>
   </form>
   
   <!-- <h2 name="title">{{serverResponse}}</h2> -->

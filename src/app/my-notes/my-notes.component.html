@@ -5,7 +5,7 @@
         <button type="button" class="btn btn-primary btn-lg" id="noteBtn" (click)="addNewNote()">+</button>
       </div>
       <ul class="list-group" style="border-radius: 0px;">
-        <li class="list-group-item active" *ngFor="let hero of list2" (click)="loadNote(hero)" (dblclick)="deleteNote(hero)">
+        <li class="list-group-item active" *ngFor="let hero of list2" (click)="loadNote(hero)">
           <span>{{hero.notesTitle}}</span>
           <span class="float-right">
             <a (click)="deleteNote(hero)">
