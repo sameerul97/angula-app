@@ -2,8 +2,8 @@
 Consumes default angular builtin features such Angular Router, Http Client. 
 Implemedted Session using JWT (JSON Web Token)
 App deployed to Heroku as well as own server. 
-# Heroku link: http://angula-app.herokuapp.com
-# Nginx server (Own server) : http://angularnoteapp.sameerul.com (Due to performace, made use of heroku)
+Heroku link: http://angula-app.herokuapp.com
+Nginx server (Own server) : http://angularnoteapp.sameerul.com (Due to performace, made use of heroku)
 
 # Backend
 Cosumes NodeJS RESTful API.
