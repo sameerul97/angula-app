@@ -15,7 +15,8 @@
           <div class="row">
             <div class="col-md-4 text-center">
               <img class="img-circle avatar avatar-original" style="-webkit-user-select:none; 
-              display:block; margin:auto;" src="http://robohash.org/sitsequiquia.png?size=120x120">
+              display:block; margin:auto;"
+                src="http://robohash.org/sitsequiquia.png?size=120x120">
               <div class="p-2">
                 <label class="btn btn-primary p-2">
                   Change Picture
@@ -34,9 +35,9 @@
                 <div class="col-md-6">
                   <span class="text-muted">Email: {{ myEmail }}</span>
                   <br>
-                  <span class="text-muted">Password: {{ myPassword }}</span>
-
-                  <small class="text-muted">Created: {{ accountCreated }}</small>
+                  <!-- <span class="text-muted">Password: {{ myPassword }}</span> -->
+                  <br>
+                  <!-- <small class="text-muted">Created: {{ accountCreated }}</small> -->
                 </div>
                 <!-- Have countdown of total notes and Todos uploaded by the user -->
                 <!-- <div class="col-md-6">
@@ -67,12 +68,12 @@
 <!-- <button type="button" id="myModal" [hidden]=true class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button> -->
-<div #editUserDataModal class="modal fade" data-keyboard="false" data-backdrop="static" id="editUserDataModal" tabindex="-1" role="dialog" aria-labelledby="editUserDataModal"
-  aria-hidden="true">
+<div #editUserDataModal class="modal fade" data-keyboard="false" data-backdrop="static" id="editUserDataModal" tabindex="-1"
+  role="dialog" aria-labelledby="editUserDataModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Session Finished</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Update profile</h5>
       </div>
       <div class="modal-body">
         <div class="">
@@ -81,12 +82,46 @@
           <div class="p-3">
             <form (ngSubmit)="update(myUsername)" #userReLoginForm="ngForm">
               <div class="form-group">
-                <label for="name">Username ? *</label>
+                <label for="name">Username</label>
                 <input type="text" class="form-control" required [(ngModel)]="myUsername" name="myUsername" #username="ngModel">
                 <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
                   Username is required
                 </div>
               </div>
+
+              
+              <!-- <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password"
+                  #password="ngModel" (keyup)="onKey()">
+                <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                  Password is required
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password*</label>
+                <input type="password" class="form-control" id="password2" required [(ngModel)]="model.password2" name="password2"
+                  #password2="ngModel" (keyup)="onKey()">
+                <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                  Password is required
+                </div>
+              </div>
+              <div *ngIf="passwordMatch; else notMatch">Password Match:
+                <i class="fas fa-check"></i>
+              </div>
+              <ng-template #notMatch>
+                <div>Password Match:
+                  <i class="fas fa-times"></i>
+                </div>
+              </ng-template>
+
+              <button type="submit" class="btn btn-success" [disabled]="!passwordMatch || !userLoginForm.form.valid">Submit</button>
+              <h2 name="title">{{serverResponse}}</h2>
+              <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="default" color="#fff" type="ball-newton-cradle">
+                <p style="font-size: 20px; color: white">Signing Up...</p>
+              </ngx-spinner> -->
+
 
               <!-- <div class="form-group">
                 <label for="password">Password*</label>
@@ -108,7 +143,7 @@
       <div class="modal-footer">
 
         <!-- <button type="button" class="btn btn-secondary" (click)="signOut()" data-dismiss="modal">Log Out</button> -->
-        <button type="submit" class="btn btn-success" data-dismiss="modal" [disabled]="!userReLoginForm.form.valid">Submit</button>
+        <button (click)="update(myUsername)" class="btn btn-success" data-dismiss="modal" [disabled]="!userReLoginForm.form.valid" >Submit</button>
 
         <!-- <button type="button" class="btn btn-primary">Log In</button> -->
       </div>

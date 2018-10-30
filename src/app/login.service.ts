@@ -32,10 +32,10 @@ export class LoginService {
   }
 
   // Signing up 
-  signUpService(username,email, password): Observable<LoginMessage> {
+  signUpService(username, email, password): Observable<LoginMessage> {
     const body = new HttpParams()
       .set('name', username)
-      .set('email',email)
+      .set('email', email)
       .set('password', password);
 
     //     console.log(this.http_Var.post <UserCredential> ("http://localhost:3000/login",
@@ -55,6 +55,34 @@ export class LoginService {
       }
     )
   }
+
+  updateProfile(userId, username): Observable<LoginMessage> {
+    const body = new HttpParams()
+      .set('userId', userId)
+      .set('name', username)
+    var storedToken = localStorage.getItem('token');
+
+    //     console.log(this.http_Var.post <UserCredential> ("http://localhost:3000/login",
+    //     body.toString(),
+    //     {
+    //       headers: new HttpHeaders()
+    //         .set('Content-Type', 'application/x-www-form-urlencoded')
+    //     }
+    //   )
+    // );
+    // Register 
+    return this.http_Var.post<LoginMessage>("http://api.sameerul.com:3000/updateProfile",
+      body.toString(),
+      {
+        headers: new HttpHeaders()
+          .set('Content-Type', 'application/x-www-form-urlencoded')
+          .set('Authorization', storedToken)
+
+      }
+    )
+  }
+
+
   getLoginService(): Observable<LoginMessage> {
     // this.data = this.http.get<LoginMessage[]>(this._url);
     // console.log(this.data.Message)
@@ -84,7 +112,7 @@ export class LoginService {
       }
     )
   }
-  
+
   profile() {
 
   }

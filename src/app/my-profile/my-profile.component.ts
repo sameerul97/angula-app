@@ -15,7 +15,7 @@ export class MyProfileComponent implements OnInit {
   public myUsername: string;
   myPassword: string;
   myEmail: string;
-  accountCreated: number;
+  public userId: string;
 
   ngOnInit() {
     this.userDataService.getProfile().subscribe(res =>
@@ -25,6 +25,10 @@ export class MyProfileComponent implements OnInit {
 
   update(myUsername){
     this.myUsername = myUsername;
+    this._loginService.updateProfile(this.userId,this.myUsername).subscribe(res =>
+      this.logData(res)
+    );
+
   }
   checkLogin() {
     if (this._loginService.isLoggedIn()) {
@@ -37,11 +41,15 @@ export class MyProfileComponent implements OnInit {
 
     }
   }
+  logData(res){
+    console.log(res);
+  }
   bindData(response) {
     // console.log(response);
     console.log(response);
     this.myUsername = response.name;
     this.myEmail = response.email;
+    this.userId = response.id;
   }
 
 }
