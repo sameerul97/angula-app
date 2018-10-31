@@ -12,9 +12,11 @@ MongoDB as Data Source
 Every request and routes are secured. Requires Authorisation
 JSON Web Token are served 
 Tested with Postman
+# Todo (Future Plan)
+Ammending Note changes in real time and updating in front-end. 
+Migrate to opensource Realtime databases such as RethinkDB.
 
 # AngulaApp
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
