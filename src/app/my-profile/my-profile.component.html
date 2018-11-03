@@ -89,7 +89,7 @@
                 </div>
               </div>
 
-              
+
               <!-- <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password"
@@ -143,7 +143,9 @@
       <div class="modal-footer">
 
         <!-- <button type="button" class="btn btn-secondary" (click)="signOut()" data-dismiss="modal">Log Out</button> -->
-        <button (click)="update(myUsername)" class="btn btn-success" data-dismiss="modal" [disabled]="!userReLoginForm.form.valid" >Submit</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        <button (click)="update(myUsername)" class="btn btn-success" data-dismiss="modal" [disabled]="!userReLoginForm.form.valid">Update</button>
 
         <!-- <button type="button" class="btn btn-primary">Log In</button> -->
       </div>

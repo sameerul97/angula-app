@@ -1,7 +1,8 @@
 .homeBg {
   
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1507415492521-917f60c93bfe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3d6b0c0ed6911e3705484fb9385d72c2&auto=format&fit=crop&w=1049&q=80'),linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    /* background-color: #593196; */
+    background-image: url("../../assets/first-section-bg.png");
     background-blend-mode: overlay;
        background-attachment: fixed;
     background-position: center;

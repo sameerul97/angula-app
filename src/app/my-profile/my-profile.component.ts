@@ -42,11 +42,11 @@ export class MyProfileComponent implements OnInit {
     }
   }
   logData(res){
-    console.log(res);
+    // console.log(res);
   }
   bindData(response) {
     // console.log(response);
-    console.log(response);
+    // console.log(response);
     this.myUsername = response.name;
     this.myEmail = response.email;
     this.userId = response.id;
