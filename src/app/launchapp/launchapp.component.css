@@ -1,8 +1,31 @@
 a{
     text-decoration-line: none;
 }
-
-.btn-light:hover{
+.second-section {
+  
+    /* height: 100%; */
+    /* background-color: #593196; */
+    background-image: url("../../assets/second-section-bg.png");
+	background-size: cover;
+	width: 100%;
+	background-repeat: no-repeat;
+	padding: 20% 0px;
+    /* background-blend-mode: overlay;
+       background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    text-align:center; */
+  }
+  .second-section h1{
+      color: white;
+  }
+.btn-light{
+    margin: 20px;
+    padding: 20px;
+}
+  .btn-light:hover{
     cursor:pointer;
     -webkit-box-shadow:0 5px 15px 0 rgba(0,0,0,0.2),
     0 2px 4px 0 rgba(0,0,0,0.24);
