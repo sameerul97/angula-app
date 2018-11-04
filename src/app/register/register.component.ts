@@ -49,7 +49,8 @@ export class RegisterComponent implements OnInit {
   }
   setText(response) {
     // console.log(Message);
-    if (response.Message === "signedup") {
+    // Check wat response message contains (Last bug)
+    if (response.Message === "Signed Up") {
       this._loginService.postLoginService(this.model.userEmail, this.model.password)
         .subscribe(res =>
           this.registeredUserSignIn(res)
@@ -60,21 +61,21 @@ export class RegisterComponent implements OnInit {
       // this.router.navigate(['/myProfile']);
     }
     else {
+      this.ngxSpinner.hide();
+
       this.serverResponse = response.Message;
     }
     console.log(response.Message);
   }
   registeredUserSignIn(response) {
+    // console.log("Im here");
     this.ngxSpinner.hide();
-
     this.serverResponse = response.Message;
     localStorage.setItem("userName", response.Message);
     console.log(response);
     localStorage.setItem("token", "Bearer " + response.token);
     console.log(response.token);
     console.log(this._loginService.isLoggedIn());
-
     this.router.navigate(['/myProfile']);
-
   }
 }
