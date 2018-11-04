@@ -3,3 +3,7 @@
     box-shadow: 0 3px 15px 1px currentColor;
     /* box-shadow: 0 8px 25px -1px cornflowerblue; */
 }
+
+.navbar-brand{
+    padding-left: inherit;
+}
