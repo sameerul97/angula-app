@@ -20,7 +20,9 @@ a{
   }
 
   .third-section {
-  
+
+  /* background:#fff; */
+  /* min-height:1--; */
     /* height: 100%; */
     background-color: #fff;
     /* background-image: url("../../assets/third-section.png"); */
@@ -42,6 +44,7 @@ a{
 .btn-light{
     margin: 20px;
     padding: 20px;
+    background-color: lightgray;
 }
   .btn-light:hover{
     cursor:pointer;
