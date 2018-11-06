@@ -44,11 +44,18 @@ a{
 .btn-light{
     margin: 20px;
     padding: 20px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
   .btn-light:hover{
     cursor:pointer;
     -webkit-box-shadow:0 5px 15px 0 rgba(0,0,0,0.2),
     0 2px 4px 0 rgba(0,0,0,0.24);
     box-shadow:0 5px 15px 0 rgba(0,0,0,0.2),0 2px 4px 0 rgba(0,0,0,0.24);
+}
+
+.third-sectionDiv{
+    background-color: lavender;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
 }
