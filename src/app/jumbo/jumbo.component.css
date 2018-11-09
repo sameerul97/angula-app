@@ -17,7 +17,7 @@
     transform: translateY(-50%);
   }
   .titleContainer > h1{
-    text-shadow: 2px 8px 8px black;
+    /* text-shadow: 2px 8px 8px black; */
   }
   .title{
     color:white;text-align:center;
