@@ -6,7 +6,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthService {
   // THis service is responsible for checkin the token whether 
-  //it is expired or not checks the token and return boolean
+  //it is expired or not , checks the token and return boolean
   constructor(public jwtHelper: JwtHelperService) { }
   public isAuthenticated(): boolean {
     const helper = new JwtHelperService();
